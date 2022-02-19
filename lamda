@@ -1,0 +1,54 @@
+ef kareal(sayi):
+    return(sayi**2)
+
+print(kareal(5))
+
+kareal=lambda x:x**2
+
+print(kareal(5))
+
+list=[1,2,3,4,5,6,7,8,9,10]
+list1=[i**2 for i in list]
+print(list1)
+
+vize=int(input("VİZE giriniz"))
+final=int(input("FİNAL giriniz"))
+hesap=lambda vize,final:vize*0.4 +final*0.6
+print(hesap(vize,final))
+a=int(input(" A sayı giriniz"))
+b=int(input("B sayı giriniz"))
+carp=lambda a,b:a*b
+print(carp(a,b))
+x=int(input("x değerini giriniz"))
+y=int(input("y değerini giriniz"))
+def carp (x,y):
+    return x*y
+print("X*Y CARPIMI:",carp(x,y))
+
+liste=[1,2,3,4,5,6,7,8,9,10]
+
+map1=map(lambda s:s**2,liste)
+print(list(map1))
+"""
+liste1=[1,3,5,9,7,6]
+liste2=[1,3,5,9,7,6]
+liste3=[1,3,5,9,7,6]
+map2=map(lambda x,y,z:x*y*z ,liste1,liste2,liste3)
+print(list(map2))
+
+from functools import reduce
+liste=[0,1,2,3,4,5,6]
+reduce1=reduce(lambda x,y:x+y,liste)
+print(reduce1)
+print(list(liste))
+"""
+0+1
+1+2
+3+3
+6+4
+10+5
+15+6
+21
+
+"""
+
