@@ -1,0 +1,23 @@
+import sqlite3 as lite
+vt=lite.connect("C:\SQLite\database.db")
+im=vt.cursor()
+
+
+def ogrenciListesi():
+    im.execute("SELECT * FROM Ogrenci")
+    veri=im.fetchall()
+    vt.commit()
+    print(veri)
+
+def ogrenciEkle(Ad,Soyad):
+    im.execute("INSERT INTO Ogrenci (Ad,Soyad) VALUES (?,?)",(Ad,Soyad))
+    vt.commit()
+
+#im.execute("İNSERT INTO Ogrenci (Ad,Soyad) VALUES ('Ayşe','KARACA')")
+#vt.commit()
+
+    
+ad=input(" öğrenci adını giriniz")
+soyad=input(" soyadını giriniz")
+ogrenciEkle(ad,soyad)
+ogrenciListesi()
